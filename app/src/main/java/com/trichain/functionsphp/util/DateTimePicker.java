@@ -14,6 +14,7 @@ public class DateTimePicker {
             sourceCompatibility JavaVersion.VERSION_1_8
             targetCompatibility JavaVersion.VERSION_1_8
          }
+         Set editText focusable false in case using
     */
     public void showDateTimePicker(Context context) {
         final Calendar currentDate = Calendar.getInstance();
