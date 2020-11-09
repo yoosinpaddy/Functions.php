@@ -39,4 +39,14 @@ dependencies {
     //Room components
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation("com.squareup.okhttp3:logging-interceptor:4.3.1")
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
 }
