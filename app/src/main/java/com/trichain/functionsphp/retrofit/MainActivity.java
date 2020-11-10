@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.trichain.functionsphp.R;
 import com.trichain.functionsphp.retrofit.network.ApiService;
@@ -11,13 +13,19 @@ import com.trichain.functionsphp.retrofit.networkResponse.HomePageResponse;
 import com.trichain.functionsphp.util.util;
 
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-
+//ArrayList<Lessonsmodel> lessonsmodels=;
     private ApiService service;
     //Gson
 //    implementation 'com.google.code.gson:gson:2.8.6'
@@ -65,6 +73,62 @@ public class MainActivity extends AppCompatActivity {
                             //Logger.logThis(LOG_E, "fillData()", "Fatal Failure: " + t.getLocalizedMessage(), util.getLineNumber());
                         }
                     });
+
+
+/*
+        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), mFile);
+
+        ProgressRequestBody fileBody = new ProgressRequestBody(mFile, "multipart/form-data", this);
+        MultipartBody.Part myFile = MultipartBody.Part.createFormData("post", mFile.getName(), requestFile);
+        MultipartBody.Part myFile2 = MultipartBody.Part.createFormData("post", mFile.getName(), fileBody);
+        MultipartBody.Part type1 = MultipartBody.Part.createFormData("type", getType(model.getPath()));
+        MultipartBody.Part status = MultipartBody.Part.createFormData("status", "active");
+        MultipartBody.Part text = MultipartBody.Part.createFormData("text", model.getDescription() == null ? "none" : model.getDescription() );
+        MultipartBody.Part tags = MultipartBody.Part.createFormData("tags", getTags());
+
+        service.createPost(currentUser.getToken(), myFile2, type1, status, text, tags)
+                .enqueue(new Callback<CreatePostResponse>() {
+                    @Override
+                    public void onResponse(Call<CreatePostResponse> call, Response<CreatePostResponse> response) {
+                        b.btnPost.setClickable(true);
+                        if (p!=null&&p.isShowing()){
+                            p.dismiss();
+                        }
+                        if (response.isSuccessful()) {
+                            uploadListener.onSuccess();
+                            Toast.makeText(NewPostActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            b.progress.setVisibility(View.GONE);
+                            b.edtDesc.setText("");
+                            b.edtDesc.setText("");
+                            hashTag = new ArrayList<>();
+                            mediaPath = "";
+                            deleteHashTags();
+                            Log.e(TAG, "onResponse: " + getType(model.getPath()));
+                        } else {
+                            uploadListener.onFailure(uploadPos);
+                            try {
+                                if (response.errorBody() != null) {
+                                    Log.e(TAG, "onResponse: " + response.errorBody().string());
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            Toast.makeText(NewPostActivity.this, "Unsuccessful", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<CreatePostResponse> call, Throwable t) {
+                        uploadListener.onFailure(uploadPos);
+                        if (p!=null&&p.isShowing()){
+                            p.dismiss();
+                        }
+                        b.btnPost.setClickable(true);
+                        b.progress.setVisibility(View.GONE);
+                        Toast.makeText(NewPostActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                        Log.e(TAG, "onFailure: Failure " + t.getLocalizedMessage());
+                    }
+                });*/
        
     }
 }
