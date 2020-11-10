@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.trichain.functionsphp.R;
 import com.trichain.functionsphp.retrofit.network.ApiService;
+import com.trichain.functionsphp.retrofit.network.ProgressRequestBody;
 import com.trichain.functionsphp.retrofit.networkResponse.HomePageResponse;
 import com.trichain.functionsphp.util.util;
 
@@ -23,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ProgressRequestBody.UploadCallbacks  {
     private static final String TAG = "MainActivity";
 //ArrayList<Lessonsmodel> lessonsmodels=;
     private ApiService service;
@@ -76,6 +77,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 /*
+
+        File mFile = new File(model.getPath());
+        if (mFile.exists()) {
+            Log.e(TAG, "uploadPost: exists");
+        } else {
+            Log.e(TAG, "uploadPost: not exists");
+        }
+
         RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), mFile);
 
         ProgressRequestBody fileBody = new ProgressRequestBody(mFile, "multipart/form-data", this);
@@ -130,5 +139,20 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
        
+    }
+
+    @Override
+    public void onProgressUpdate(int percentage) {
+
+    }
+
+    @Override
+    public void onError() {
+
+    }
+
+    @Override
+    public void onFinish() {
+
     }
 }
