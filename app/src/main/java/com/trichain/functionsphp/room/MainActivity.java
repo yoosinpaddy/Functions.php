@@ -1,4 +1,4 @@
-package com.trichain.functionsphp;
+package com.trichain.functionsphp.room;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.trichain.functionsphp.R;
 import com.trichain.functionsphp.room.config.DatabaseClient;
 
 public class MainActivity extends AppCompatActivity {
