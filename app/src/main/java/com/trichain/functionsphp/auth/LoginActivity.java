@@ -15,6 +15,7 @@ ActivityLoginBinding b;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         b= DataBindingUtil.setContentView(this,R.layout.activity_login);
+        getSupportActionBar().setTitle("Login");
     }
 
     public void validate(View view){

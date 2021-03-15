@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".auth.LoginActivity">
+        tools:context=".auth.RegisterActivity">
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/placeholderImage"
             android:layout_width="150dp"
@@ -25,13 +26,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
+        <RadioGroup
+            android:id="@+id/genderRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="16dp"
+            android:layout_below="@id/emailTL">
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/maleRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Male"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/femaleRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female"/>
+        </RadioGroup>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordTL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_margin="16dp"
-            android:layout_below="@id/emailTL"
+            android:layout_below="@id/genderRG"
             app:passwordToggleEnabled="true"
             android:hint="Password">
             <com.google.android.material.textfield.TextInputEditText
@@ -40,20 +59,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rPasswordTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="16dp"
+            android:layout_below="@id/passwordTL"
+            app:passwordToggleEnabled="true"
+            android:hint="Repeat Password">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rPasswordED"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/loginBtn"
+            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:cornerRadius="16dp"
-            android:text="Login"
+            android:text="Register"
             android:onClick="validate"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
-            android:layout_below="@id/passwordTL"/>
+            android:layout_below="@id/rPasswordTL"/>
         <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progress_circular"
             android:layout_width="wrap_content"
