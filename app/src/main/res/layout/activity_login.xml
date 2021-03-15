@@ -12,6 +12,54 @@
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/ic_baseline_account_circle_24"/>
-        <
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="16dp"
+            android:layout_below="@id/placeholderImage"
+            android:hint="Email">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailED"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="16dp"
+            android:layout_below="@id/emailTL"
+            app:passwordToggleEnabled="true"
+            android:hint="Password">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordED"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cornerRadius="16dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_below="@id/passwordTL"/>
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_centerInParent="true"
+            android:elevation="4dp"
+            android:visibility="gone"/>
     </RelativeLayout>
 </layout>
