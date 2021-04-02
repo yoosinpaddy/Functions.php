@@ -25,6 +25,8 @@ public class SharedPrefsManager {
     private final String SHARED_PREFS_NAME = "kenya_sihami";
     private static final String TAG = "SharedPrefsManager";
 
+    //toggle case Ctrl+Shift+U
+
     private SharedPrefsManager(Context context) {
         sharedPreferences = context.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE);
     }
