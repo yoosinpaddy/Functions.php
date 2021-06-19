@@ -3,6 +3,7 @@ package com.trichain.functionsphp.auth;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -31,7 +32,7 @@ ActivityRegisterBinding b;
         }else if (b.rPasswordED.getText().toString().isEmpty()){
             b.rPasswordED.setError("Please fill this");
             b.rPasswordED.requestFocus();
-        }else if (b.passwordED.getText().toString().contentEquals(b.rPasswordED.getText().toString())){
+        }else if (!b.passwordED.getText().toString().contentEquals(b.rPasswordED.getText().toString())){
             b.passwordED.setError("Passwords don't match");
             b.passwordED.requestFocus();
         }else if (b.genderRG.getCheckedRadioButtonId() == -1){
@@ -39,6 +40,10 @@ ActivityRegisterBinding b;
         }else{
             networkRegister();
         }
+    }
+    public void loginRedirect(View v){
+        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+        RegisterActivity.this.finish();
     }
 
     private void networkRegister() {

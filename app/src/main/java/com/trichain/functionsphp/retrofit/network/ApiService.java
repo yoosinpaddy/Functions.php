@@ -1,4 +1,4 @@
-package com.trichain.functionsphp.retrofit.network;
+ package com.trichain.functionsphp.retrofit.network;
 
 
 import com.trichain.functionsphp.retrofit.networkResponse.AuthResponse;
