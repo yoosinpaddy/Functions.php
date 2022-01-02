@@ -3,6 +3,7 @@ package com.trichain.functionsphp.auth;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -36,5 +37,10 @@ ActivityLoginBinding b;
     private void networkLogin() {
         b.progressCircular.show();
         b.progressCircular.hide();
+    }
+
+    public void signUpRedirect(View v){
+        startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+        this.finish();
     }
 }
