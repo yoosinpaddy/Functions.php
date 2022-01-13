@@ -36,6 +36,7 @@ public class SharedPrefsManager {
             mInstance = new SharedPrefsManager(context);
         }
         return mInstance;
+
     }
 
 
