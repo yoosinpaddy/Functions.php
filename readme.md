@@ -34,18 +34,7 @@
 
 <h3 align="center">Java starter template</h3>
 
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/yoosinpaddy/Functions.php"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/yoosinpaddy/Functions.php">View Demo</a>
-    ·
-    <a href="https://github.com/yoosinpaddy/Functions.php/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/yoosinpaddy/Functions.php/issues">Request Feature</a>
-  </p>
+
 </div>
 
 
@@ -61,18 +50,16 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#code-examples">Code Examples</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#authentication">Authentication</a></li>
+        <li><a href="#retrofit">Retrofit</a></li>
+        <li><a href="#room">Room Database</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -95,20 +82,22 @@ This project is made to jump start newbbies on few areas of android
 
 
 
-<!-- GETTING STARTED -->
-## Code Examplese present
+<!-- CODE EXAMPLES -->
+## Code Examples present
 
 I have integrated few code to jumptart your project
 
+<!-- AUTHENTICATION -->
 ### Authentication
 
 This project contains Login and Register files with validations and nework request methods.
 
-
+<!-- RETROFIT -->
 ### Retrofit
 
 The projects contains an implemetation of retrofit and how to use custom classes in the response
 
+<!-- ROOM -->
 ### Room Database
 
 The projects contains an implemetation of room database and how to use custom classes in the response
@@ -167,5 +156,5 @@ Project Link: [https://github.com/yoosinpaddy/Functions.php](https://github.com/
 [license-shield]: https://img.shields.io/github/license/yoosinpaddy/Functions.php.svg?style=for-the-badge
 [license-url]: https://github.com/yoosinpaddy/Functions.php/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/yoosinpaddy/
 [product-screenshot]: images/screenshot.png
