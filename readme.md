@@ -57,7 +57,6 @@
         <li><a href="#room">Room Database</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -108,14 +107,6 @@ The projects contains an implemetation of room database and how to use custom cl
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -131,7 +122,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Yoosin Paddy - [@PYoosin](https://twitter.com/PYoosin) 
 
 Project Link: [https://github.com/yoosinpaddy/Functions.php](https://github.com/yoosinpaddy/Functions.php)
 
@@ -139,7 +130,6 @@ Project Link: [https://github.com/yoosinpaddy/Functions.php](https://github.com/
 
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
